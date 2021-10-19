@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="funçoes.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Questão 22</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q22')" onload="autofill('q22')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+            <a class="btn font-weight-bold" href="PaginaInicial.html"> Página Inicial</a>
+        </div>
+        <br><br>
+
+        <h4>QUESTÃO 22</h4>
+
+        <p>
+            Pedro foi contratado como desenvolvedor de <i>software</i> de uma empresa. Em seu primeiro dia de trabalho
+            ele se deparou
+            com o DER (Diagrama Entidade-Relacionamento), que representa os dados de um sistema de controle de malotes.
+            Foi
+            solicitado a Pedro relatório para o sistema contendo os seguintes dados: o nome de todos os funcionários que
+            enviaram
+            os malotes, o código dos malotes enviados, a descrição de seus conteúdos e a situação dos malotes. Para a
+            geração
+            do relatório, Pedro tem que fazer uma consulta utilizando o comando <i>SELECT</i> da linguagem SQL.
+        </p>
+
+        <img src="img/imgQ22.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+
+        <p>
+            Conhecidos o modelo conceitual de dados e os dados necessários para a tarefa de Pedro, o comando
+            <b>SELECT</b> que ele
+            deve executar para realizar a consulta e produzir o relatório corretamente é
+        </p>
+
+        <p>
+            <input id="alt3A" name="q22" value="A" type="radio">
+            <label for="alt3A">
+                a) SELECT NOME,CODIGO_MALOTE,DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
+                ON (CODIGO_CONTEUDO = CODIGO_CONTEUDO) INNER JOIN FUNCIONARIOS ON (MATRICULA =
+                MATRICULA);
+            </label>
+        </p>
+        <p>
+            <input id="alt3B" name="q22" value="B" type="radio">
+            <label for="alt3B">
+                b) SELECT NOME, CODIGO_MALOTE, DESCRICAO, SITUACAO_MALOTE FROM MALOTES, CONTEUDOS,
+                FUNCIONARIOS WHERE (CODIGO_CONTEUDO = CODIGO_CONTEUDO) AND (MATRICULA = MATRICULA);
+            </label>
+        </p>
+        <p>
+            <input id="alt3C" name="q22" value="C" type="radio">
+            <label for="alt3C">
+                c) SELECT NOME,CODIGO_MALOTE,DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
+                INNER JOIN FUNCIONARIOS ON(MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)
+                ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);
+            </label>
+        </p>
+        <p>
+            <input id="alt3D" name="q22" value="D" type="radio">
+            <label for="alt3D">
+                d) SELECT NOME, CODIGO_MALOTE, DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
+                ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
+                ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);
+            </label>
+
+        </p>
+        <p>
+            <input id="alt3E" name="q22" value="E" type="radio">
+            <label for="alt3E">
+                e) SELECT NOME, CODIGO_MALOTE, DESCRICAO, SITUACAO_MALOTE FROM MALOTES, CONTEUDOS,
+                FUNCIONARIOS INNER JOIN WHERE (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)
+                AND (MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);
+            </label>
+        </p>
+
+        <input type="submit" value="Corrigir" class="btn btn-primary" />
+
+        <hr>
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q23a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+        </div>
+</body>
+
+</html>

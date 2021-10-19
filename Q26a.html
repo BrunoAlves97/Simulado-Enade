@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="funçoes.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Questão 26</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q26')" onload="autofill('q26')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+            <a class="btn font-weight-bold" href="PaginaInicial.html"> Página Inicial</a>
+        </div>
+        <br><br>
+        <h4>QUESTÃO 26</h4>
+        <p>
+            Um engenheiro de <i>software</i> planejou o desenvolvimento
+            de um novo projeto, com prazo máximo de 220 dias, em
+            seis fases: comunicação, planejamento, modelagem,
+            construção, documentação e implantação. As fases seriam
+            realizadas na sequência em que foram listadas. Exceção
+            foi feita para as fases de construção e a documentação,
+            que poderiam ocorrer em paralelo. Entretanto, a fase de
+            implantação só poderia ocorrer se tanto construção quanto
+            documentação estivessem encerradas.
+        </p>
+
+        <i>
+            A tabela a seguir apresenta a duração de cada fase do
+            plano de desenvolvimento proposto.
+        </i>
+
+        <p>
+            Tabela - Fases e respectivas dependências e durações
+        </p>
+        <img src="img/imgQ26.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+
+        <p>
+            Considerando o uso do Método do Caminho Crítico, e que
+            o projeto tem prazo máximo de 220 dias, com início no dia 1,
+            avalie as seguintes afirmações.
+        </p>
+        <p>
+            I. A data mínima para o início da fase de implantação
+            é o dia 191.
+        </p>
+        <p>
+            II. O projeto possui um caminho crítico, que é 1-2-3-5-6.
+        </p>
+        <p>
+            III. A folga livre da atividade documentação é de 60 dias.
+        </p>
+        <br>
+        <p>
+            É correto apenas o que se afirma em:
+        </p>
+        <p>
+            <input id="alt1A" name="q26" value="A" type="radio">
+            <label for="alt1A">
+                a) I.
+            </label>
+        </p>
+        <p>
+            <input id="alt1B" name="q26" value="B" type="radio">
+            <label for="alt1B">
+                b) I e II.
+            </label>
+        </p>
+        <p>
+            <input id="alt1C" name="q26" value="C" type="radio">
+            <label for="alt1C">
+                c) I e III.
+            </label>
+        </p>
+        <p>
+            <input id="alt1D" name="q26" value="D" type="radio">
+            <label for="alt1D">
+                d) II e III.
+            </label>
+        </p>
+        <p>
+            <input id="alt1E" name="q26" value="E" type="radio">
+            <label for="alt1E">
+                e) I, II e III.
+            </label>
+        </p>
+        <input type="submit" value="Corrigir" class="btn btn-primary" />
+        <hr>
+
+
+
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q27a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

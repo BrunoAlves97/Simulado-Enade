@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="funçoes.js"> </script>
+    <title>Questão 1</title>
+</head>
+
+<body onchange="salvarFormulario('q1')" onload="autofill('q1')" >
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+
+
+            <a class="btn btn-primary font-weight-bold" href="PaginaInicial.html">Página Inicial</a>
+
+
+        </div>
+        <br><br>
+        <h4>QUESTÃO 1</h4>
+        <p>
+            Retrato de uma princesa desconhecida
+            Para que ela tivesse um pescoço tão fino
+            Para que os seus pulsos tivessem um quebrar de caule
+            Para que os seus olhos fossem tão frontais e limpos
+            Para que a sua espinha fosse tão direita
+            E ela usasse a cabeça tão erguida
+            Com uma tão simples claridade sobre a testa
+            Foram necessárias sucessivas gerações de escravos
+            De corpo dobrado e grossas mãos pacientes
+            Servindo sucessivas gerações de príncipes
+            Ainda um pouco toscos e grosseiros
+            Ávidos cruéis e fraudulentos
+            Foi um imenso desperdiçar de gente
+            Para que ela fosse aquela perfeição
+            Solitária exilada sem destino
+        </p>
+
+        <i>
+            ANDRESEN, S. M. B. <b>Dual.</b> Lisboa: Caminho, 2004. p. 73.
+        </i>
+
+        <p>
+            No poema, a autora sugere que
+        </p>
+
+        <p>
+            <input id="alt1A" name="q1" value="A" type="radio">
+            <label for="alt1A">
+                a) os príncipes e as princesas são naturalmente belos.
+            </label>
+        </p>
+        <p>
+            <input id="alt1B" name="q1" value="B" type="radio">
+            <label for="alt1B">
+                b) os príncipes generosos cultivavam a beleza da princesa.
+            </label>
+        </p>
+        <p>
+            <input id="alt1C" name="q1" value="C" type="radio">
+            <label for="alt1C">
+                c) a beleza da princesa é desperdiçada pela miscigenação racial.
+            </label>
+        </p>
+        <p>
+            <input id="correta" name="q1" value="D" type="radio">
+            <label for="alt1D">
+                d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes.
+            </label>
+        </p>
+        <p>
+            <input id="alt1E" name="q1" value="E" type="radio">
+            <label for="alt1E">
+                e) o exílio e a solidão são os responsáveis pela manutenção do corpo esbelto da princesa.
+            </label>
+        </p>
+
+        <button onclick="correçao()"> Corrigir </button> 
+        <!--<input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" /> -->
+        <div id="display"></div>
+        <hr>
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q2a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+        
+        </div>
+</body>
+
+</html>

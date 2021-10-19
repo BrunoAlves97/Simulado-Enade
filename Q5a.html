@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="funçoes.js"> </script>
+    <title>Questões 2</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q5')" onload="autofill('q5')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold cssEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+            <a class="btn" href="PaginaInicial.html"> Página Inicial</a>
+        </div>
+        <br><br>
+        <h4>QUESTÃO 5</h4>
+
+        <img src="img/imgQ5.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+
+        <p>
+            O ritmo de desmatamento na Amazônia Legal diminuiu no mês de junho de 2011, segundo levantamento feito pela
+            organização ambiental brasileira Imazon (Instituto do Homem e Meio Ambiente da Amazônia). O relatório
+            elaborado
+            pela ONG, a partir de imagens de satélite, apontou desmatamento de 99 km² no bioma em junho de 2011, uma
+            redução
+            de 42% no comparativo com junho de 2010. No acumulado entre agosto de 2010 e junho de 2011, o desmatamento
+            foi
+            de 1 534 km², aumento de 15% em relação a agosto de 2009 e junho de 2010. O estado de Mato Grosso foi
+            responsável
+            por derrubar 38% desse total e é líder no ranking do desmatamento, seguido do Pará (25%) e de Rondônia
+            (21%).
+        </p>
+        <p> De acordo com as informações do mapa e do texto, </p>
+        <p>
+            <input id="alt2A" name="q" value="A" type="radio">
+            <label for="alt2A">
+                a) foram desmatados 1 534 km² na Amazônia Legal nos últimos dois anos.
+            </label>
+        </p>
+        <p>
+            <input id="alt2B" name="q" value="B" type="radio">
+            <label for="alt2B">
+                b) não houve aumento do desmatamento no último ano na Amazônia Legal.
+            </label>
+        </p>
+        <p>
+            <input id="correta" name="q" value="C" type="radio">
+            <label for="alt2C">
+                c) três estados brasileiros responderam por 84% do desmatamento na Amazônia Legal entre agosto de 2010 e
+                junho de 2011.
+            </label>
+        </p>
+        <p>
+            <input id="alt2D" name="q" value="D" type="radio">
+            <label for="alt2D">
+                d) o estado do Amapá apresenta alta taxa de desmatamento em comparação aos demais estados da Amazônia
+                Legal.
+            </label>
+        </p>
+        <p>
+            <input id="alt2E" name="q" value="E" type="radio">
+            <label for="alt2E">
+                e) o desmatamento na Amazônia Legal, em junho de 2010, foi de 140 km2
+                , comparando-se o índice de junho de 2011
+                ao índice de junho de 2010.
+            </label>
+        </p>
+
+        <input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" />
+        <div id="display"></div>
+        <hr>
+
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q6a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

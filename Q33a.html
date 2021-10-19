@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="funçoes.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Questão 33</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q33')" onload="autofill('q33')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+            <a class="btn font-weight-bold" href="PaginaInicial.html"> Página Inicial</a>
+        </div>
+        <br><br>
+
+        <h4>QUESTÃO 33</h4>
+
+        <p>
+            Métricas de confiabilidade de software dizem respeito à probabilidade de um componente de software produzir
+            uma
+            saída incorreta. Originalmente as métricas de confiabilidade foram criadas para componentes de hardware,
+            consistindo
+            em desgaste mecânico, aquecimento elétrico e fatores físicos relacionados aos componentes. Não há desgaste
+            em
+            componentes de software, que podem, inclusive, continuar operando mesmo após a produção de um resultado
+            incorreto.
+        </p>
+        <p>
+            Observe os quadros a seguir, a fim de identificar algumas métricas de confiabilidade e disponibilidade de um
+            dado
+            sistema SIST.
+        </p>
+        <p>
+            Quadro 1
+        </p>
+        <img src="img/imgQ33-1.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+        <p>
+            Em que S indica que SIST estava disponível no instante de tempo (InstX) de número X e <br>
+            N indica que o SIST não estava disponível no instante de tempo (InstX) de número X.
+        </p>
+        <p>
+            Quadro 2
+        </p>
+        <img src="img/imgQ33-2.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+        <p>
+            Em que F indica que SIST falhou quando se fez a ele a solicitação (SoliX) de número X e <br>
+            N indica que o SIST não falhou quando se fez a ele a solicitação (SoliX) de número X.
+        </p>
+        <p>
+            Quadro 3
+        </p>
+        <img src="img/imgQ33-3.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+        <p>
+            O valor indica o instante, em uma dada unidade de tempo, em que ocorreu a falha (FalX) de número X.
+        </p>
+        <p>
+            Assinale a alternativa que corresponde, respectivamente, aos valores das métricas disponibilidade (em
+            porcentagem),
+            taxa de ocorrência de falha (em porcentagem) e tempo médio entre falhas (em unidade de tempo).
+        </p>
+        <p>
+            <input id="alt2A" name="q33" value="A" type="radio">
+            <label for="alt2A">
+                a) 40; 30; 27,7.
+            </label>
+        </p>
+        <p>
+            <input id="alt2B" name="q33" value="B" type="radio">
+            <label for="alt2B">
+                b) 60; 30; 27,7.
+            </label>
+        </p>
+        <p>
+            <input id="alt2C" name="q33" value="C" type="radio">
+            <label for="alt2C">
+                c) 60; 70; 4.
+            </label>
+        </p>
+        <p>
+            <input id="alt2D" name="q33" value="D" type="radio">
+            <label for="alt2D">
+                d) 40; 30; 4.
+            </label>
+        </p>
+        <p>
+            <input id="alt2E" name="q33" value="E" type="radio">
+            <label for="alt2E">
+                e) 40; 70; 4.
+            </label>
+        </p>
+
+        <input type="submit" value="Corrigir" class="btn btn-primary" />
+
+        <hr>
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q34a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

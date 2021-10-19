@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="funçoes.js"> </script>
+    <title>Questão 6</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q6')" onload="autofill('q6')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold cssEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+            <a class="btn" href="PaginaInicial.html"> Página Inicial</a>
+        </div>
+        <br><br>
+        <h4>QUESTÃO 6</h4>
+
+        <img src="img/imgQ6.PNG" alt="">
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+
+        <p>
+            A expressão “o Xis da questão” usada no título do
+            infográfico diz respeito
+        </p>
+        <input id="alt3A" name="q6" value="A" type="radio">
+        <label for="alt3A">
+            a) à quantidade de anos de estudos necessários para
+            garantir um emprego estável com salário digno.
+        </label>
+        </p>
+        <p>
+            <input id="correta" name="q6" value="B" type="radio">
+            <label for="alt3B">
+                b) às oportunidades de melhoria salarial que surgem à medida
+                que aumenta o nível de escolaridade dos indivíduos.
+            </label>
+        </p>
+        <p>
+            <input id="alt3C" name="q6" value="C" type="radio">
+            <label for="alt3C">
+                c) à influência que o ensino de língua estrangeira nas
+                escolas tem exercido na vida profissional dos indivíduos.
+            </label>
+        </p>
+        <p>
+            <input id="alt3D" name="q6" value="D" type="radio">
+            <label for="alt3D">
+                d) aos questionamentos que são feitos acerca da
+                quantidade mínima de anos de estudo que os
+                indivíduos precisam para ter boa educação.
+            </label>
+
+        </p>
+
+        <p>
+            <input id="alt3E" name="q6" value="E" type="radio">
+            <label for="alt3E">
+                e) à redução da taxa de desemprego em razão da política
+                atual de controle da evasão escolar e de aprovação
+                automática de ano de acordo com a idade.
+            </label>
+        </p>
+
+        <input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" />
+        <div id="display"></div>
+        <hr>
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q7a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

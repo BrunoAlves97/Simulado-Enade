@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="funçoes.js"> </script>
+    <title>Questão 3</title>
+</head>
+
+<body class="fundo1" onchange="salvarFormulario('q3')" onload="autofill('q3')">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
+
+
+            <a class="btn btn-primary font-weight-bold" href="PaginaInicial.html">Página Inicial</a>
+
+
+        </div>
+        <br><br>
+        <h4>QUESTÃO 3</h4>
+
+        <p>
+            A cibercultura pode ser vista como herdeira legítima
+            (embora distante) do projeto progressista dos filósofos
+            do século XVII. De fato, ela valoriza a participação das
+            pessoas em comunidades de debate e argumentação.
+            Na linha reta das morais da igualdade, ela incentiva uma
+            forma de reciprocidade essencial nas relações humanas.
+            Desenvolveu-se a partir de uma prática assídua de trocas
+            de informações e conhecimentos, coisa que os filósofos
+            do Iluminismo viam como principal motor do progresso.
+            (...) A cibercultura não seria pós-moderna, mas estaria
+            inserida
+            perfeitamente
+            na continuidade
+            dos ideais
+            revolucionários e republicanos de liberdade, igualdade e
+            fraternidade. A diferença é apenas que, na cibercultura,
+            esses “valores” se encarnam em dispositivos técnicos
+            concretos. Na era das mídias eletrônicas, a igualdade se
+            concretiza na possibilidade de cada um transmitir a todos;
+            a liberdade toma forma nos softwares de codificação e no
+            acesso a múltiplas comunidades virtuais, atravessando
+            fronteiras, enquanto a fraternidade, finalmente, se traduz
+            em interconexão mundial.
+        </p>
+
+        <i>
+            LEVY, P. Revolução virtual. <b>Folha de S. Paulo</b>.
+            Caderno Mais, 16 ago. 1998, p.3 (adaptado).
+        </i>
+
+        <p>
+            O desenvolvimento de redes de relacionamento por meio
+            de computadores e a expansão da Internet abriram novas
+            perspectivas para a cultura, a comunicação e a educação.
+            De acordo com as ideias do texto acima, a cibercultura
+        </p>
+
+        <p>
+            <input id="alt3A" name="q" value="A" type="radio">
+            <label for="alt3A">
+                a) representa uma modalidade de cultura pós-moderna
+                de liberdade de comunicação e ação.
+            </label>
+        </p>
+        <p>
+            <input id="alt3B" name="q" value="B" type="radio">
+            <label for="alt3B">
+                b) constituiu negação dos valores
+                progressistas defendidos pelos filósofos do Iluminismo.
+            </label>
+        </p>
+        <p>
+            <input id="alt3C" name="q" value="C" type="radio">
+            <label for="alt3C">
+                c) banalizou a ciência ao disseminar o conhecimento nas
+                redes sociais.
+            </label>
+        </p>
+        <p>
+            <input id="alt3D" name="q" value="D" type="radio">
+            <label for="alt3D">
+                d) valorizou o isolamento dos indivíduos pela produção
+                de softwares de codificação.
+            </label>
+
+        </p>
+        <p>
+            <input id="correta" name="q" value="E" type="radio">
+            <label for="alt3E">
+                e) incorpora valores do Iluminismo ao favorecer o
+                compartilhamento de informações e conhecimentos.
+            </label>
+        </p>
+
+        <input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" />
+        <div id="display"></div>
+        <hr>
+
+        <div class="row">
+            <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
+
+            <a class="col-auto" href="Q4a.html"> Próxima Questão </a>
+        </div>
+
+        <footer class="text-center"> 
+            <p> 
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
+                </i>
+            </p>
+        </footer>
+        
+        </div>
+</body>
+
+</html>
