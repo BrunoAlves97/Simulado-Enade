@@ -140,10 +140,15 @@
 			icon: 'success',
 			title: 'Boa!!',
 			text: `Parabéns! A alternativa correta realmente é a letra "${correta}"`
+              
 		  })
+          setInterval(() => {
+            window.open ('Q2a.html','_self',false)
+          }, 3000);
+          
             //document.getElementById("display").innerHTML = `Parabéns, voce acertou! A alternativa é a letra ${correta}`
             //document.getElementById("display").style.display = "block"
-        }
+        }   
 
         else {
             Swal.fire({
