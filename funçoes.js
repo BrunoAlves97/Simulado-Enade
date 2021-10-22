@@ -158,15 +158,18 @@ function resultado() {
         if (gabarito.indexOf(quebrar[c]) > -1) {
             corretas++
         }
-
-
     }
 
     console.log(corretas)
 
+    var porcentagem = corretas / 35 * 100;
+    var porcentagem = porcentagem.toFixed(2);
+
+
     document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}`
-    document.getElementById("qtt").innerHTML = `Quantidade de questões respondidas: ${quebrar.length}`
+    document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}`
+    document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem+"%"}`
 
-
+    
 
 }
