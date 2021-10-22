@@ -162,8 +162,8 @@ function resultado() {
 
     console.log(corretas)
 
-    var porcentagem = corretas / 35 * 100;
-    var porcentagem = porcentagem.toFixed(2);
+    var porcentagem = corretas / quebrar.length * 100;
+    var porcentagem = porcentagem.toFixed(1);
 
 
     document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}`
