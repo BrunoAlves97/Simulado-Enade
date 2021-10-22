@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -50,8 +51,8 @@
             </label>
         </p>
         <p>
-            <input id="alt2B" name="q19" value="B" type="radio">
-            <label for="alt2B">
+            <input id="correta" name="q19" value="B" type="radio">
+            <label for="correta">
                 b) II.
             </label>
         </p>
@@ -74,7 +75,7 @@
             </label>
         </p>
 
-        <input type="submit" value="Corrigir" class="btn btn-primary" />
+        <input type="submit" onclick="correçao19()" value="Corrigir" class="btn btn-primary" />
 
         <hr>
 
@@ -93,5 +94,59 @@
         </footer>
         </div>
 </body>
+<script>
+    function getCorreta() {
 
+    return document.getElementById("correta").value
+    }
+
+    function getCheckado() {
+
+    input = document.querySelectorAll('input')
+
+    console.log(input)
+
+        for (c = 0; c < input.length; c++) {
+
+            if (input[c].checked == true) {
+
+                return input[c].value
+
+                break
+            }
+        }
+    }
+
+    var entrada;
+    var correta;
+    
+    function correçao19() {
+
+        entrada = getCheckado()
+        correta = getCorreta()
+
+        if (entrada == correta) {
+            Swal.fire({
+			icon: 'success',
+			title: 'Boa!!',
+			text: `Parabéns! A alternativa correta realmente é a letra "b) II."`
+              
+		  })
+            setInterval(() => {
+                window.open ('Q20a.html','_self',false)
+            }, 3000);
+        }   
+
+        else {
+            Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: `Que pena, voce errou! A alternativa correta é a letra: "b) II."`
+		  })
+          setInterval(() => {
+            window.open ('Q20a.html','_self',false)
+          }, 3000);
+        }
+    }
+</script>
 </html>

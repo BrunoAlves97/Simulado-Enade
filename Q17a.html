@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
     <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
@@ -61,13 +62,13 @@
             </label>
         </p>
         <p>
-            <input id="alt1E" name="q17" value="E" type="radio">
-            <label for="alt1E">
+            <input id="correta" name="q17" value="E" type="radio">
+            <label for="correta">
                 e) a fase de otimização.
             </label>
         </p>
 
-        <input type="submit" value="Corrigir" class="btn btn-primary" />
+        <input type="submit" onclick="correçao17()" value="Corrigir" class="btn btn-primary" />
         <hr>
 
         <div class="row">
@@ -85,5 +86,59 @@
         </footer>
         </div>
 </body>
+<script>
+    function getCorreta() {
 
+    return document.getElementById("correta").value
+    }
+
+    function getCheckado() {
+
+    input = document.querySelectorAll('input')
+
+    console.log(input)
+
+        for (c = 0; c < input.length; c++) {
+
+            if (input[c].checked == true) {
+
+                return input[c].value
+
+                break
+            }
+        }
+    }
+
+    var entrada;
+    var correta;
+    
+    function correçao17() {
+
+        entrada = getCheckado()
+        correta = getCorreta()
+
+        if (entrada == correta) {
+            Swal.fire({
+			icon: 'success',
+			title: 'Boa!!',
+			text: `Parabéns! A alternativa correta realmente é a letra "e) a fase de otimização."`
+              
+		  })
+            setInterval(() => {
+                window.open ('Q18a.html','_self',false)
+            }, 3000);
+        }   
+
+        else {
+            Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: `Que pena, voce errou! A alternativa correta é a letra: "e) a fase de otimização."`
+		  })
+          setInterval(() => {
+            window.open ('Q18a.html','_self',false)
+          }, 3000);
+        }
+    }
+</script>
 </html>

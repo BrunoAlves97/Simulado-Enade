@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -68,8 +69,8 @@
             </label>
         </p>
         <p>
-            <input id="alt3D" name="q22" value="D" type="radio">
-            <label for="alt3D">
+            <input id="correta" name="q22" value="D" type="radio">
+            <label for="correta">
                 d) SELECT NOME, CODIGO_MALOTE, DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
                 ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
                 ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);
@@ -85,8 +86,7 @@
             </label>
         </p>
 
-        <input type="submit" value="Corrigir" class="btn btn-primary" />
-
+        <input type="submit" onclick="correçao22()" value="Corrigir" class="btn btn-primary" />
         <hr>
 
         <div class="row">
@@ -104,5 +104,63 @@
         </footer>
         </div>
 </body>
+<script>
+    function getCorreta() {
 
+    return document.getElementById("correta").value
+    }
+
+    function getCheckado() {
+
+    input = document.querySelectorAll('input')
+
+    console.log(input)
+
+        for (c = 0; c < input.length; c++) {
+
+            if (input[c].checked == true) {
+
+                return input[c].value
+
+                break
+            }
+        }
+    }
+
+    var entrada;
+    var correta;
+    
+    function correçao22() {
+
+        entrada = getCheckado()
+        correta = getCorreta()
+
+        if (entrada == correta) {
+            Swal.fire({
+			icon: 'success',
+			title: 'Boa!!',
+			text: `Parabéns! A alternativa correta realmente é a letra "d) SELECT NOME, CODIGO_MALOTE, DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
+                ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
+                ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);"`
+              
+		  })
+            setInterval(() => {
+                window.open ('Q23a.html','_self',false)
+            }, 3000);
+        }   
+        
+        else {
+            Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: `Que pena, voce errou! A alternativa correta é a letra: "d) SELECT NOME, CODIGO_MALOTE, DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
+                ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
+                ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);"`
+		  })
+          setInterval(() => {
+            window.open ('Q23a.html','_self',false)
+          }, 3000);
+        }
+    }
+</script>
 </html>
