@@ -107,6 +107,7 @@
 
 
 <script>
+
     function getCorreta() {
 
     return document.getElementById("correta").value
@@ -129,10 +130,13 @@
         }
     }
 
+
+
     var entrada;
     var correta;
     
     function correçao1() {
+        if(entrada != undefined){
 
         entrada = getCheckado()
         correta = getCorreta()
@@ -159,8 +163,11 @@
             window.open ('Q2a.html','_self',false)
           }, 3000);
         }
-
     }
+    else{
+        inputVazio();
+    }
+}
 </script>
 
 </html>

@@ -170,6 +170,12 @@ function resultado() {
     document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}`
     document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem+"%"}`
 
-    
+}
 
+function inputVazio(){
+Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: `"Você precisa selecionar alguma alternativa para correção.."`,
+  })
 }

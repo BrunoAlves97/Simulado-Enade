@@ -135,6 +135,7 @@
     var correta;
     
     function correçao22() {
+        if(entrada != undefined){
 
         entrada = getCheckado()
         correta = getCorreta()
@@ -166,5 +167,10 @@
           }, 3000);
         }
     }
+    else{
+        inputVazio();
+    }
+}
+
 </script>
 </html>

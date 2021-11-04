@@ -126,6 +126,7 @@
     var correta;
     
     function correçao5() {
+        if(entrada != undefined){
 
         entrada = getCheckado()
         correta = getCorreta()
@@ -154,7 +155,10 @@
             window.open ('Q6a.html','_self',false)
           }, 3000);
         }
-
     }
+    else{
+        inputVazio();
+    }
+}
 </script>
 </html>
