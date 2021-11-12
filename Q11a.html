@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -21,9 +21,9 @@
     </div>
     <div class="container">
         <div class="text-center">
-            <h1 class="font-weight-bold cssEnade">Site Simulado ENADE</h1>
+            <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
             <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
-        </div>     
+        </div>
         <br><br>
         <h4>QUESTÃO 11</h4>
         <p>
@@ -35,7 +35,8 @@
         </p>
 
         <img src="img/imgQ11.PNG" alt="">
-        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e Gabaritos Enade</a></i></p>
+        <p><i>FONTE: <a target="_blank" href="http://inep.gov.br/educacao-superior/enade/provas-e-gabaritos">Provas e
+                    Gabaritos Enade</a></i></p>
 
         <p>
             Com relação ao tema, analise as asserções a seguir.
@@ -103,9 +104,9 @@
             <a class="col-auto" href="Q12a.html"> Próxima Questão </a>
         </div>
 
-        <footer class="text-center"> 
-            <p> 
-                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+        <footer class="text-center">
+            <p>
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link:
                     <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
                 </i>
             </p>
@@ -115,14 +116,14 @@
 <script>
     function getCorreta() {
 
-    return document.getElementById("correta").value
+        return document.getElementById("correta").value
     }
 
     function getCheckado() {
 
-    input = document.querySelectorAll('input')
+        input = document.querySelectorAll('input')
 
-    console.log(input)
+        console.log(input)
 
         for (c = 0; c < input.length; c++) {
 
@@ -137,41 +138,42 @@
 
     var entrada;
     var correta;
-    
+
     function correçao11() {
-        if(entrada != undefined){
+        if (entrada != undefined) {
 
-        entrada = getCheckado()
-        correta = getCorreta()
+            entrada = getCheckado()
+            correta = getCorreta()
 
-        if (entrada == correta) {
-            Swal.fire({
-			icon: 'success',
-			title: 'Boa!!',
-			text: `Parabéns! A alternativa correta realmente é a letra "b) As duas asserções são proposições verdadeiras, mas
+            if (entrada == correta) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Boa!!',
+                    text: `Parabéns! A alternativa correta realmente é a letra "b) As duas asserções são proposições verdadeiras, mas
                 a segunda não é uma justificativa correta da primeira."`
-              
-		  })
-            setInterval(() => {
-                window.open ('Q12a.html','_self',false)
-            }, 3000);
-        }   
 
+                })
+                setInterval(() => {
+                    window.open('Q12a.html', '_self', false)
+                }, 3000);
+            }
+
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `Que pena, voce errou! A alternativa correta é a letra: "b) As duas asserções são proposições verdadeiras, mas
+                a segunda não é uma justificativa correta da primeira."`
+                })
+                setInterval(() => {
+                    window.open('Q12a.html', '_self', false)
+                }, 3000);
+            }
+        }
         else {
-            Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: `Que pena, voce errou! A alternativa correta é a letra: "b) As duas asserções são proposições verdadeiras, mas
-                a segunda não é uma justificativa correta da primeira."`
-		  })
-          setInterval(() => {
-            window.open ('Q12a.html','_self',false)
-          }, 3000);
+            inputVazio();
         }
     }
-    else{
-        inputVazio();
-    }
-}
 </script>
+
 </html>
