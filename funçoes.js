@@ -35,12 +35,12 @@ function correçao() {
 
     if (entrada == correta) {
 
-        document.getElementById("display").innerHTML = `Parabéns, voce acertou! A alternativa é a letra ${correta}`
+        document.getElementById("display").innerHTML = `Parabéns, você acertou! A alternativa é a letra ${correta}`
         document.getElementById("display").style.display = "block"
     }
 
     else {
-        document.getElementById("display").innerHTML = `Que pena, voce errou! A alternativa é a letra ${correta}`
+        document.getElementById("display").innerHTML = `Que pena, você errou! A alternativa é a letra ${correta}`
         document.getElementById("display").style.display = "block"
     }
 
@@ -95,7 +95,7 @@ function salvarFormulario(id) {
 
         memoriaSplit = memoria.split(" ") //memoria split dá espaco entre dados do armazenamento da sectionstorage
 
-        for (c = 0; c < memoriaSplit.length; c++){ //loop para acrescentar respostas no chave memoria, c menor que memoriasplit 
+        for (c = 0; c < memoriaSplit.length; c++) { //loop para acrescentar respostas no chave memoria, c menor que memoriasplit 
 
             if (memoriaSplit[c].split(":")[0] == id) {
 
@@ -145,9 +145,9 @@ window.onload = function autofill(id) {
 
 function resultado() {
 
-	gabarito = ["q1:D", "q2:A", "q3:E", "q4:A", "q5:C", "q6:B", "q7:B", "q8:E", "q9:B", "q10:A", "q11:B", "q12:B", "q13:E",
-				"q14:C", "q15:B", "q16:B", "q17:E", "q18:C", "q19:B", "q20:A", "q21:C", "q22:D", "q23:E", "q24:E", "q25:D", "q26:C",
-				"q27:D", "q28:C", "q29:A", "q30:A", "q31:C", "q32:C", "q33:D", "q34:A", "q35:E"]
+    gabarito = ["q1:D", "q2:A", "q3:E", "q4:A", "q5:C", "q6:B", "q7:B", "q8:E", "q9:B", "q10:A", "q11:B", "q12:B", "q13:E",
+        "q14:C", "q15:B", "q16:B", "q17:E", "q18:C", "q19:B", "q20:A", "q21:C", "q22:D", "q23:E", "q24:E", "q25:D", "q26:C",
+        "q27:D", "q28:C", "q29:A", "q30:A", "q31:C", "q32:C", "q33:D", "q34:A", "q35:E"]
 
     quebrar = sessionStorage.getItem("respostas").split(" ")
 
@@ -168,14 +168,14 @@ function resultado() {
 
     document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}`
     document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}`
-    document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem+"%"}`
+    document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem + "%"}`
 
 }
 
-function inputVazio(){
-Swal.fire({
-    icon: 'error',
-    title: 'Oops...',
-    text: `"Você precisa selecionar alguma alternativa para correção.."`,
-  })
+function inputVazio() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `"Você precisa selecionar alguma alternativa para correção.."`,
+    })
 }
