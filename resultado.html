@@ -29,7 +29,7 @@
             <h3 id="porcentagem"> Seus acertos: nAn </h3>
             <br><br>
         </div>
-        <a class="btn btn-primary" type="submit" href="index.html">Retornar para Página Inicial</a>
+        <a class="btn btn-primary" onclick="limparCache()" type="submit" href="index.html">Retornar para Página Inicial</a>
         <hr>
         <footer class="text-center">
             <p>
@@ -40,5 +40,10 @@
         </footer>
     </div>
 </body>
+<script>
+    function limparCache(){
+        sessionStorage.clear();
+    };
+</script>
 
 <!--Comentario-->
