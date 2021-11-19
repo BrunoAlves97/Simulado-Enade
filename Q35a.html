@@ -157,7 +157,9 @@
 			icon: 'success',
 			title: 'Boa!!',
 			text: `Parabéns! A alternativa correta realmente é a letra "e) II, III e IV."`
-		  })
+		  }).then(function() {
+		  window.open ('resultado.html','_self',false)
+		  });
             setInterval(() => {
                 window.open ('resultado.html','_self',false)
             }, 60000);
@@ -168,7 +170,9 @@
 			icon: 'error',
 			title: 'Oops...',
 			text: `Que pena, voce errou! A alternativa correta é a letra: "e) II, III e IV."`
-		  })
+		  }).then(function() {
+		  window.open ('resultado.html','_self',false)
+		  });
           setInterval(() => {
             window.open ('resultado.html','_self',false)
           }, 60000);

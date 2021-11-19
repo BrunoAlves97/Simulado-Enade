@@ -148,7 +148,9 @@
                 ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
                 ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);"`
               
-		  })
+		  }).then(function() {
+		  window.open ('Q23a.html','_self',false)
+		  });
             setInterval(() => {
                 window.open ('Q23a.html','_self',false)
             }, 60000);
@@ -161,7 +163,9 @@
 			text: `Que pena, voce errou! A alternativa correta é a letra: "d) SELECT NOME, CODIGO_MALOTE, DESCRICAO,SITUACAO_MALOTE FROM MALOTES INNER JOIN CONTEUDOS
                 ON (MALOTES.CODIGO_CONTEUDO = CONTEUDOS.CODIGO_CONTEUDO)INNER JOIN FUNCIONARIOS
                 ON(MALOTES.MATRICULA = FUNCIONARIOS.MATRICULA);"`
-		  })
+		  }).then(function() {
+		  window.open ('Q23a.html','_self',false)
+		  });
           setInterval(() => {
             window.open ('Q23a.html','_self',false)
           }, 60000);
