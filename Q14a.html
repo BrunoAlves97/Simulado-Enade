@@ -125,8 +125,9 @@
                     icon: 'success',
                     title: 'Boa!!',
                     text: `Parabéns! A alternativa correta realmente é a letra "c) a beleza da princesa é desperdiçada pela miscigenação racial."`
-
-                })
+                }).then(function () {
+                    window.location = 'Q15a.html';
+                });
                 setInterval(() => {
                     window.open('Q15a.html', '_self', false)
                 }, 60000);
@@ -137,7 +138,9 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: `Que pena, voce errou! A alternativa correta é a letra: "c) a beleza da princesa é desperdiçada pela miscigenação racial."`
-                })
+                }).then(function () {
+                    window.location = 'Q15a.html';
+                });
                 setInterval(() => {
                     window.open('Q15a.html', '_self', false)
                 }, 60000);

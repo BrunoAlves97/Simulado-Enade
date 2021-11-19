@@ -164,7 +164,9 @@
                     icon: 'success',
                     title: 'Boa!!',
                     text: `Parabéns! A alternativa correta realmente é a letra "d) 40; 30; 4."`
-                })
+                }).then(function () {
+                    window.location = 'Q34a.html';
+                });
                 setInterval(() => {
                     window.open('Q34a.html', '_self', false)
                 }, 60000);
@@ -175,7 +177,9 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: `Que pena, voce errou! A alternativa correta é a letra: "d) 40; 30; 4."`
-                })
+                }).then(function () {
+                    window.location = 'Q34a.html';
+                });
                 setInterval(() => {
                     window.open('Q34a.html', '_self', false)
                 }, 60000);

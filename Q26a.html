@@ -157,8 +157,9 @@
                     icon: 'success',
                     title: 'Boa!!',
                     text: `Parabéns! A alternativa correta realmente é a letra "c) I e III."`
-
-                })
+                }).then(function () {
+                    window.location = 'Q27a.html';
+                });
                 setInterval(() => {
                     window.open('Q27a.html', '_self', false)
                 }, 60000);
@@ -169,7 +170,9 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: `Que pena, voce errou! A alternativa correta é a letra: "c) I e III."`
-                })
+                }).then(function () {
+                    window.location = 'Q27a.html';
+                });
                 setInterval(() => {
                     window.open('Q27a.html', '_self', false)
                 }, 60000);

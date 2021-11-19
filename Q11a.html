@@ -151,8 +151,9 @@
                     title: 'Boa!!',
                     text: `Parabéns! A alternativa correta realmente é a letra "b) As duas asserções são proposições verdadeiras, mas
                 a segunda não é uma justificativa correta da primeira."`
-
-                })
+                }).then(function () {
+                    window.location = 'Q12a.html';
+                });
                 setInterval(() => {
                     window.open('Q12a.html', '_self', false)
                 }, 60000);
@@ -164,7 +165,9 @@
                     title: 'Oops...',
                     text: `Que pena, voce errou! A alternativa correta é a letra: "b) As duas asserções são proposições verdadeiras, mas
                 a segunda não é uma justificativa correta da primeira."`
-                })
+                }).then(function () {
+                    window.location = 'Q12a.html';
+                });
                 setInterval(() => {
                     window.open('Q12a.html', '_self', false)
                 }, 60000);

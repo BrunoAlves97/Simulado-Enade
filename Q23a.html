@@ -150,8 +150,9 @@
                     icon: 'success',
                     title: 'Boa!!',
                     text: `Parabéns! A alternativa correta realmente é a letra "e) 9"`
-
-                })
+                }).then(function () {
+                    window.location = 'Q24a.html';
+                });
                 setInterval(() => {
                     window.open('Q24a.html', '_self', false)
                 }, 60000);
@@ -162,7 +163,9 @@
                     icon: 'error',
                     title: 'Oops...',
                     text: `Que pena, voce errou! A alternativa correta é a letra: "e) 9"`
-                })
+                }).then(function () {
+                    window.location = 'Q24a.html';
+                });
                 setInterval(() => {
                     window.open('Q24a.html', '_self', false)
                 }, 60000);
