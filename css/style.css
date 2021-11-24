@@ -21,6 +21,19 @@
     margin-right: auto;
   }
 
+  .img3 {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img4 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 td{
     font-weight: bold;
 }

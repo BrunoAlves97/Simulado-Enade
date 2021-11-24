@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -41,7 +41,7 @@
             aspectos gerenciais (planejamento, controle e tomada de
             decisão) ao processo de desenvolvimento de software
         </p>
-        <p class="text-center">PORQUE</p>
+        <p>PORQUE</p>
         <p>
             considera que o processo é composto por várias etapas
             que são executadas de forma sistemática e sequencial.
@@ -86,7 +86,7 @@
         </p>
 
         <input type="submit" onclick="correçao27()" value="Corrigir" class="btn btn-primary" />
-        
+
         <hr>
 
         <div class="row">
@@ -95,9 +95,9 @@
             <a class="col-auto" href="Q28a.html"> Próxima Questão </a>
         </div>
 
-        <footer class="text-center"> 
-            <p> 
-                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+        <footer class="text-center">
+            <p>
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link:
                     <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
                 </i>
             </p>
@@ -108,14 +108,14 @@
 <script>
     function getCorreta() {
 
-    return document.getElementById("correta").value
+        return document.getElementById("correta").value
     }
 
     function getCheckado() {
 
-    input = document.querySelectorAll('input')
+        input = document.querySelectorAll('input')
 
-    console.log(input)
+        console.log(input)
 
         for (c = 0; c < input.length; c++) {
 
@@ -130,45 +130,45 @@
 
     var entrada;
     var correta;
-    
+
     function correçao27() {
-        if(entrada != undefined){
+        if (entrada != undefined) {
 
-        entrada = getCheckado()
-        correta = getCorreta()
+            entrada = getCheckado()
+            correta = getCorreta()
 
-        if (entrada == correta) {
-            Swal.fire({
-			icon: 'success',
-			title: 'Boa!!',
-			text: `Parabéns! A alternativa correta realmente é a letra "d) A primeira asserção é uma proposição falsa, e a
+            if (entrada == correta) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Boa!!',
+                    text: `Parabéns! A alternativa correta realmente é a letra "d) A primeira asserção é uma proposição falsa, e a
                 segunda, uma proposição verdadeira."`
-              
-		  }).then(function() {
-		  window.open ('Q28a.html','_self',false)
-		  });
-            setInterval(() => {
-                window.open ('Q28a.html','_self',false)
-            }, 60000);
-        }   
-        
+                }).then(function () {
+                    window.location = 'Q28a.html';
+                });
+                setInterval(() => {
+                    window.open('Q28a.html', '_self', false)
+                }, 60000);
+            }
+
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `Que pena, voce errou! A alternativa correta é a letra: "d) A primeira asserção é uma proposição falsa, e a
+                segunda, uma proposição verdadeira."`
+                }).then(function () {
+                    window.location = 'Q28a.html';
+                });
+                setInterval(() => {
+                    window.open('Q28a.html', '_self', false)
+                }, 60000);
+            }
+        }
         else {
-            Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: `Que pena, voce errou! A alternativa correta é a letra: "d) A primeira asserção é uma proposição falsa, e a
-                segunda, uma proposição verdadeira."`
-		  }).then(function() {
-		  window.open ('Q28a.html','_self',false)
-		  });
-          setInterval(() => {
-            window.open ('Q28a.html','_self',false)
-          }, 60000);
+            inputVazio();
         }
     }
-    else{
-        inputVazio();
-    }
-}
 </script>
+
 </html>

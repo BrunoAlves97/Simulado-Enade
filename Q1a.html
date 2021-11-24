@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,7 +14,7 @@
     <title>Questão 1</title>
 </head>
 
-<body class="fundo1" onchange="salvarFormulario('q1')" onload="autofill('q1')" >
+<body class="fundo1" onchange="salvarFormulario('q1')" onload="autofill('q1')">
     <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
             aria-valuemin="0" aria-valuemax="100" style="width: 3%">3%</div>
@@ -83,7 +83,7 @@
             </label>
         </p>
 
-        <button class="btn btn-primary font-weight-bold" onclick="correçao1()"> Corrigir </button> 
+        <button class="btn btn-primary font-weight-bold" onclick="correçao1()"> Corrigir </button>
         <!--<input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" /> -->
         <div id="display"></div>
         <hr>
@@ -94,15 +94,15 @@
             <a class="col-auto" href="Q2a.html"> Próxima Questão </a>
         </div>
 
-        <footer class="text-center"> 
-            <p> 
-                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+        <footer class="text-center">
+            <p>
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link:
                     <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
                 </i>
             </p>
         </footer>
-        
-        </div>
+
+    </div>
 </body>
 
 
@@ -110,14 +110,14 @@
 
     function getCorreta() {
 
-    return document.getElementById("correta").value
+        return document.getElementById("correta").value
     }
 
     function getCheckado() {
 
-    input = document.querySelectorAll('input')
+        input = document.querySelectorAll('input')
 
-    console.log(input)
+        console.log(input)
 
         for (c = 0; c < input.length; c++) {
 
@@ -134,43 +134,43 @@
 
     var entrada;
     var correta;
-    
+
     function correçao1() {
-        if(entrada != undefined){
+        if (entrada != undefined) {
 
-        entrada = getCheckado()
-        correta = getCorreta()
+            entrada = getCheckado()
+            correta = getCorreta()
 
-        if (entrada == correta) {
-            Swal.fire({
-			icon: 'success',
-			title: 'Boa!!',
-			text: `Parabéns! A alternativa correta realmente é a letra "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
-		  }).then(function() {
-		    window.open ('Q2a.html','_self',false)
-		  });
-            setInterval(() => {
-                window.open ('Q2a.html','_self',false)
-            }, 60000);
-        }   
+            if (entrada == correta) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Boa!!',
+                    text: `Parabéns! A alternativa correta realmente é a letra "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
+                }).then(function () {
+                    window.location = 'Q2a.html';
+                });
+                setInterval(() => {
+                    window.open('Q2a.html', '_self', false)
+                }, 60000);
+            }
 
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `Que pena, voce errou! A alternativa correta é a letra: "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
+                }).then(function () {
+                    window.location = 'Q2a.html';
+                });
+                setInterval(() => {
+                    window.open('Q2a.html', '_self', false)
+                }, 60000);
+            }
+        }
         else {
-            Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: `Que pena, voce errou! A alternativa correta é a letra: "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
-		  }).then(function() {
-		    window.open ('Q2a.html','_self',false)
-		  });
-          setInterval(() => {
-          window.open ('Q2a.html','_self',false)
-          }, 60000);
+            inputVazio();
         }
     }
-    else{
-        inputVazio();
-    }
-}
 </script>
 
 </html>

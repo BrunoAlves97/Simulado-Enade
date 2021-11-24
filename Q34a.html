@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="img/logoEnade.png"/>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+    <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -52,9 +52,7 @@
             identificar oportunidades e transformá-las em diferencial
             competitivo para a empresa
         </p>
-        <p class="text-center">
-            PORQUE
-        </p>
+        <p>PORQUE</p>
         <p>
             permite estabelecer comunicação interna eficaz na
             empresa e convencer o público-alvo externo: fornecedores,
@@ -110,9 +108,9 @@
             <a class="col-auto" href="Q35a.html"> Próxima Questão </a>
         </div>
 
-        <footer class="text-center"> 
-            <p> 
-                <i>Mais informações sobre o Enade, consultar o site do Enade no link: 
+        <footer class="text-center">
+            <p>
+                <i>Mais informações sobre o Enade, consultar o site do Enade no link:
                     <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index"> Enade Inep </a>
                 </i>
             </p>
@@ -122,14 +120,14 @@
 <script>
     function getCorreta() {
 
-    return document.getElementById("correta").value
+        return document.getElementById("correta").value
     }
 
     function getCheckado() {
 
-    input = document.querySelectorAll('input')
+        input = document.querySelectorAll('input')
 
-    console.log(input)
+        console.log(input)
 
         for (c = 0; c < input.length; c++) {
 
@@ -144,44 +142,45 @@
 
     var entrada;
     var correta;
-    
-    function correçao34() {
-        if(entrada != undefined){
-            
-        entrada = getCheckado()
-        correta = getCorreta()
 
-        if (entrada == correta) {
-            Swal.fire({
-			icon: 'success',
-			title: 'Boa!!',
-			text: `Parabéns! A alternativa correta realmente é a letra "a) As duas asserções são proposições verdadeiras, e a
+    function correçao34() {
+        if (entrada != undefined) {
+
+            entrada = getCheckado()
+            correta = getCorreta()
+
+            if (entrada == correta) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Boa!!',
+                    text: `Parabéns! A alternativa correta realmente é a letra "a) As duas asserções são proposições verdadeiras, e a
                 segunda é uma justificativa correta da primeira."`
-		  }).then(function() {
-		  window.open ('Q35a.html','_self',false)
-		  });
-            setInterval(() => {
-                window.open ('Q35a.html','_self',false)
-            }, 60000);
-        }   
-        
+                }).then(function () {
+                    window.location = 'Q35a.html';
+                });
+                setInterval(() => {
+                    window.open('Q35a.html', '_self', false)
+                }, 60000);
+            }
+
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `Que pena, voce errou! A alternativa correta é a letra: "a) As duas asserções são proposições verdadeiras, e a
+                segunda é uma justificativa correta da primeira."`
+                }).then(function () {
+                    window.location = 'Q35a.html';
+                });
+                setInterval(() => {
+                    window.open('Q35a.html', '_self', false)
+                }, 60000);
+            }
+        }
         else {
-            Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: `Que pena, voce errou! A alternativa correta é a letra: "a) As duas asserções são proposições verdadeiras, e a
-                segunda é uma justificativa correta da primeira."`
-		  }).then(function() {
-		  window.open ('Q35a.html','_self',false)
-		  });
-          setInterval(() => {
-            window.open ('Q35a.html','_self',false)
-          }, 60000);
+            inputVazio();
         }
     }
-    else{
-        inputVazio();
-    }
-}
 </script>
+
 </html>
