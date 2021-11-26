@@ -1,32 +1,64 @@
 <!DOCTYPE html>
+<!-- A tag DOCTYPE é a primeira linha do documento HTML. 
+Ele informa ao navegador qual versão de HTML o documento está escrito, para que o navegador saiba o que esperar. -->
 <html lang="pt-br">
-
+<!-- O atributo HTML lang é usado para identificar o idioma do conteúdo do texto que será exibido pelo navegador -->
 <head>
+            <!-- head é a parte que não é exibida no navegador da Web quando a página é carregada. 
+    Ele contém informações como a página <title>, links para CSS (se você escolher estilizar seu conteúdo HTML com CSS),
+       e outros metadados (dados sobre o HTML, como o autor, 
+       e palavras-chave importantes que descreva o documento.) -->
     <meta charset="UTF-8">
+            <!-- Este atributo declara a codificação de caracteres do documento. 
+    Se o atributo estiver presente, seu valor deve ser uma correspondência ASCII sem distinção 
+    entre maiúsculas e minúsculas para a string "utf-8", porque UTF-8 é a única codificação válida para documentos HTML5. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links do logo do enade -->
     <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
+      <!-- importando o sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- links para CSS (estilização seu conteúdo HTML com CSS) -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- importando framework bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- importando arquivo de funções do javascript -->
     <script src="funçoes.js"> </script>
+    <!-- A tag <title> em HTML é usada para definir o título do documento HTML. 
+      Ele define o título na barra de ferramentas do navegador e fornece o título da página
+      da web quando ela é adicionada aos favoritos. -->
     <title>Questão 1</title>
 </head>
 
-<body class="fundo1" onchange="salvarFormulario('q1')" onload="autofill('q1')">
+<body class="fundo1" onchange="salvarFormulario('q1')" onload="autofill('q1')"><!-- A tag HTML <body> define o conteúdo principal do documento HTML 
+    ou a seção do documento HTML que será diretamente visível em sua página da web. -->
+  <!-- Uma class =(classe)  CSS é um atributo usado para definir um grupo de elementos HTML 
+  a fim de aplicar um estilo e formatação exclusivos a esses elementos com CSS.
+
+    onchange e onload são descritos para salvar o formulário e suas respectivas respostas e onload autofill para inserção das respostas das questões
+-->
+
+    <!-- barra de progresso com bootstrap pela classe progress e com tamanhos e valores ajustados de acordo com a evolução -->
     <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
             aria-valuemin="0" aria-valuemax="100" style="width: 3%">3%</div>
     </div>
+
+    <!-- classe container do bootstrap para a página ter espaçamento e responsividade para tamanhos de telas diversos -->
     <div class="container">
+        <!-- text-center para alinhamento ao centro da página -->
         <div class="text-center">
             <h1 class="font-weight-bold corEnade">Site Simulado ENADE</h1>
+            <!-- As tags <h1> a <h6> são usadas para definir titulos HTML. 
+      <h1> define o cabeçalho mais importante. <h6> define o título menos importante. -->
+      <!--<a class="btn btn-primary font-weight-bold" href="PaginaInicial.html">Página Inicial</a>-->
             <h3>TEMA: Análise e Desenvolvimento de Sistemas - 2011</h3>
         </div>
         <br><br>
         <h4>QUESTÃO 1</h4>
         <p>
+            <!-- O elemento <p> HTML representa um parágrafo. -->
             Retrato de uma princesa desconhecida
             Para que ela tivesse um pescoço tão fino
             Para que os seus pulsos tivessem um quebrar de caule
@@ -45,6 +77,7 @@
         </p>
 
         <i>
+            <!-- A tag i define uma parte do texto em que o conteúdo interno é exibido em itálico. -->
             ANDRESEN, S. M. B. <b>Dual.</b> Lisboa: Caminho, 2004. p. 73.
         </i>
 
@@ -54,7 +87,9 @@
 
         <p>
             <input id="alt1A" name="q1" value="A" type="radio">
+            <!-- tag input para flegar opções em um formulário -->
             <label for="alt1A">
+                <!--tag label para texto acompanhado geralmente de inputs -->
                 a) os príncipes e as princesas são naturalmente belos.
             </label>
         </p>
@@ -87,15 +122,19 @@
         <!--<input type="submit" onclick="correçao()" value="Corrigir" class="btn btn-primary" /> -->
         <div id="display"></div>
         <hr>
+        <!-- A tag <hr> em HTML significa régua horizontal e é usada para inserir uma régua horizontal 
+      ou uma quebra temática em uma página HTML para dividir ou separar seções do documento. -->
 
         <div class="row">
             <a class="col-auto mr-auto" href="resultado.html"> Finalizar Simulado</a>
-
+            <!-- A tag <a> define um hiperlink, que é usado para vincular uma página a outra. -->
             <a class="col-auto" href="Q2a.html"> Próxima Questão </a>
         </div>
 
         <footer class="text-center">
-            <hr />
+            <!-- A tag HTML footer é um elemento HTML5 que define um rodapé 
+        que geralmente contém informações de copyright ou autor no documento HTML. -->
+            <hr/>
             <br />
             <p>
               <em
@@ -112,23 +151,16 @@
               </i>
             </p>
             <p>
-              <a href="http://www.fateccarapicuiba.edu.br/" target="blank"
-                ><img src="img\Fatec.png" alt="Logo da Fatec"
-              /></a>
-    
-              <a href="https://www.cps.sp.gov.br/" target="blank">
-                <img
-                  src="img\cropped-logo-cps.png"
-                  alt="Logo da CPS"
-                  width="93"
-                  height="58"
-              /></a>
+            <a href="http://www.fateccarapicuiba.edu.br/" target="blank">
+                <img src="img\Fatec.png" alt="Logo da Fatec" />
+            </a>
+            <a href="https://www.cps.sp.gov.br/" target="blank">
+                <img src="img\cropped-logo-cps.png" alt="Logo da CPS" width="93" height="58" />
+            </a>
             </p>
         </footer>
-
     </div>
 </body>
-
 
 <script>
 
@@ -165,6 +197,29 @@
             entrada = getCheckado()
             correta = getCorreta()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             if (entrada == correta) {
                 Swal.fire({
                     icon: 'success',
@@ -173,10 +228,41 @@
                 }).then(function () {
                     window.location = 'Q2a.html';
                 });
+               
+               
+               
                 setInterval(() => {
                     window.open('Q2a.html', '_self', false)
-                }, 60000);
+                }, 60000)
+                ;
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             else {
                 Swal.fire({
