@@ -166,10 +166,10 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
 
     function getCorreta() {
 
-        return document.getElementById("correta").value
+        return document.getElementById("correta").value //validar se é correta pelo id
     }
 
-    function getCheckado() {
+    function getCheckado() {   //validar se estar checkado ou não e atribuir o valor no seccionstorage
 
         input = document.querySelectorAll('input')
 
@@ -181,11 +181,10 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
 
                 return input[c].value
 
-                break
+                break  
             }
         }
     }
-
 
 
     var entrada;
@@ -194,31 +193,8 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
     function correçao1() {
         if (entrada != undefined) {
 
-            entrada = getCheckado()
-            correta = getCorreta()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            entrada = getCheckado() //
+            correta = getCorreta()  //
 
             if (entrada == correta) {
                 Swal.fire({
@@ -227,43 +203,13 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
                     text: `Parabéns! A alternativa correta realmente é a letra "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
                 }).then(function () {
                     window.location = 'Q2a.html';
-                });
-               
-               
+                });  //caso esteja correta retorna sucesso
                
                 setInterval(() => {
                     window.open('Q2a.html', '_self', false)
-                }, 60000)
+                }, 60000)  //timer de contagem para próxima questão
                 ;
-
-
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             else {
                 Swal.fire({
                     icon: 'error',
@@ -271,14 +217,14 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
                     text: `Que pena, voce errou! A alternativa correta é a letra: "d) o trabalho compulsório de escravos proporcionou privilégios aos príncipes."`
                 }).then(function () {
                     window.location = 'Q2a.html';
-                });
+                }); //caso esteja errado retorna erro e passa para próxima página
                 setInterval(() => {
                     window.open('Q2a.html', '_self', false)
                 }, 60000);
             }
         }
         else {
-            inputVazio();
+            inputVazio(); // caso input esteja vazio ele retorna função sinalizando o erro
         }
     }
 </script>

@@ -109,23 +109,23 @@ function salvarFormulario(id) {
             } // transforma  id + resposta em padrão q5:D = q5 alternativa, concatena : e resposta D,
         }
 
-        if (!substituiu) {
+        if (!substituiu) {  //substituir valor de input flegado para novo input flegado
             gravar(escrever(memoria, id))
         }
 
     }
 
-    else {
+    else {     //
         sessionStorage.setItem("respostas", `${id}:${entrada}`)
     }
 }
 
 
-window.onload = function autofill(id) {
+window.onload = function autofill(id) {  //função para auto preencher sessionStorage
 
-    memoria = sessionStorage.getItem("respostas");
+    memoria = sessionStorage.getItem("respostas"); // atribui session de nome respostas e armazena na variavel memoria para tratamento
 
-    memoriaSplit = memoria.split(" ");
+    memoriaSplit = memoria.split(" "); // logica para separar por espaço e : entre numero de questão e alternativa flegada
 
     for (c = 0; c < memoriaSplit.length; c++) {
 
@@ -149,9 +149,10 @@ function resultado() {
         "q14:C", "q15:B", "q16:B", "q17:E", "q18:C", "q19:B", "q20:A", "q21:C", "q22:D", "q23:E", "q24:E", "q25:D", "q26:C",
         "q27:D", "q28:C", "q29:A", "q30:A", "q31:C", "q32:C", "q33:D", "q34:A", "q35:E"]
 
+        //separa as respostas de acordo com alternativas
     quebrar = sessionStorage.getItem("respostas").split(" ")
 
-    corretas = 0;
+    corretas = 0; 
 
     for (c = 0; c < quebrar.length; c++) {
 
@@ -162,12 +163,13 @@ function resultado() {
 
     console.log(corretas)
 
+    // calculo de porcentagem
     var porcentagem = corretas / quebrar.length * 100;
     var porcentagem = porcentagem.toFixed(1);
 
 
-    document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}`
-    document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}`
+    document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}` // para retornar elemento na página html pelo ID
+    document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}` // retorna questoes respondidas 
     document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem + "%"}`
 
 }
