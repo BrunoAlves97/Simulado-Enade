@@ -143,16 +143,16 @@ window.onload = function autofill(id) {  //função para auto preencher sessionS
 }
 
 
-function resultado() {
+function resultado() { //gabarito da prova
 
     gabarito = ["q1:D", "q2:A", "q3:E", "q4:A", "q5:C", "q6:B", "q7:B", "q8:E", "q9:B", "q10:A", "q11:B", "q12:B", "q13:E",
         "q14:C", "q15:B", "q16:B", "q17:E", "q18:C", "q19:B", "q20:A", "q21:C", "q22:D", "q23:E", "q24:E", "q25:D", "q26:C",
         "q27:D", "q28:C", "q29:A", "q30:A", "q31:C", "q32:C", "q33:D", "q34:A", "q35:E"]
 
-        //separa as respostas de acordo com alternativas
+    //separa as respostas de acordo com alternativas
     quebrar = sessionStorage.getItem("respostas").split(" ")
 
-    corretas = 0; 
+    corretas = 0;
 
     for (c = 0; c < quebrar.length; c++) {
 
