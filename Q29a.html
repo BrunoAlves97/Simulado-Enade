@@ -3,20 +3,21 @@
 Ele informa ao navegador qual versão de HTML o documento está escrito, para que o navegador saiba o que esperar. -->
 <html lang="PT-BR">
 <!-- O atributo HTML lang é usado para identificar o idioma do conteúdo do texto que será exibido pelo navegador -->
+
 <head>
-        <!-- head é a parte que não é exibida no navegador da Web quando a página é carregada. 
+    <!-- head é a parte que não é exibida no navegador da Web quando a página é carregada. 
     Ele contém informações como a página <title>, links para CSS (se você escolher estilizar seu conteúdo HTML com CSS),
        e outros metadados (dados sobre o HTML, como o autor, 
        e palavras-chave importantes que descreva o documento.) -->
     <meta charset="UTF-8">
-        <!-- Este atributo declara a codificação de caracteres do documento. 
+    <!-- Este atributo declara a codificação de caracteres do documento. 
     Se o atributo estiver presente, seu valor deve ser uma correspondência ASCII sem distinção 
     entre maiúsculas e minúsculas para a string "utf-8", porque UTF-8 é a única codificação válida para documentos HTML5. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- links do logo do enade -->
+    <!-- links do logo do enade -->
     <link rel="icon" type="imagem/png" href="img/logoEnade.png" />
-      <!-- links para CSS (estilização seu conteúdo HTML com CSS) -->
+    <!-- links para CSS (estilização seu conteúdo HTML com CSS) -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="funçoes.js"> </script>
@@ -118,31 +119,22 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
             <hr />
             <br />
             <p>
-              <em
-                >Fonte: As questões desse simulado foram obtidas na prova de ADS
-                2011 disponibilizada no site do INEP.</em
-              >
+                <em>Fonte: As questões desse simulado foram obtidas na prova de ADS
+                    2011 disponibilizada no site do INEP.</em>
             </p>
             <p>
-              <i
-                >Mais informações sobre o Enade, consultar o site no link:
-                <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index">
-                  Enade Inep
-                </a>
-              </i>
+                <i>Mais informações sobre o Enade, consultar o site no link:
+                    <a target="_blank" href="http://enade.inep.gov.br/enade/#!/index">
+                        Enade Inep
+                    </a>
+                </i>
             </p>
             <p>
-              <a href="http://www.fateccarapicuiba.edu.br/" target="blank"
-                ><img src="img\Fatec.png" alt="Logo da Fatec"
-              /></a>
-    
-              <a href="https://www.cps.sp.gov.br/" target="blank">
-                <img
-                  src="img\cropped-logo-cps.png"
-                  alt="Logo da CPS"
-                  width="93"
-                  height="58"
-              /></a>
+                <a href="http://www.fateccarapicuiba.edu.br/" target="blank"><img src="img\Fatec.png"
+                        alt="Logo da Fatec" /></a>
+
+                <a href="https://www.cps.sp.gov.br/" target="blank">
+                    <img src="img\cropped-logo-cps.png" alt="Logo da CPS" width="93" height="58" /></a>
             </p>
         </footer>
     </div>
@@ -151,10 +143,10 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
 <script>
     function getCorreta() {
 
-        return document.getElementById("correta").value
+        return document.getElementById("correta").value //validar se é correta pelo id
     }
 
-    function getCheckado() {
+    function getCheckado() { //validar se estar checkado ou não e atribuir o valor no seccionstorage
 
         input = document.querySelectorAll('input')
 
@@ -174,7 +166,7 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
     var entrada;
     var correta;
 
-    function correçao29() {
+    function correçao29() { //correção da questão 29
         if (entrada != undefined) {
 
             entrada = getCheckado()
@@ -187,10 +179,10 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
                     text: `Parabéns! A alternativa correta realmente é a letra "a) 11 e 29."`
                 }).then(function () {
                     window.location = 'Q30a.html';
-                });
+                }); //caso esteja correta retorna sucesso
                 setInterval(() => {
                     window.open('Q30a.html', '_self', false)
-                }, 60000);
+                }, 60000); //timer de contagem para próxima questão
             }
 
             else {
@@ -203,11 +195,11 @@ Ele informa ao navegador qual versão de HTML o documento está escrito, para qu
                 });
                 setInterval(() => {
                     window.open('Q30a.html', '_self', false)
-                }, 60000);
+                }, 60000); //caso esteja errado retorna erro e passa para próxima página
             }
         }
         else {
-            inputVazio();
+            inputVazio(); //caso input esteja vazio ele retorna função sinalizando o erro
         }
     }
 </script>

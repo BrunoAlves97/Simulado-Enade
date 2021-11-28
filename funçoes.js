@@ -1,10 +1,10 @@
-function getCorrect() {
+function getCorrect() { //valor de questão correta
 
     return document.getElementById("correta").value
 }
 
 
-function getChecked() {
+function getChecked() { //valor de questão respondida
 
     input = document.querySelectorAll('input')
 
@@ -25,13 +25,13 @@ function getChecked() {
 var entrada;
 var correta;
 
-function correçao() {
+function correçao() { //correção das alternativas
 
     entrada = getChecked()
     correta = getCorrect()
 
-    // console.log("Entrada:", getChecked())
-    // console.log("Correta:", getCorrect())
+    //console.log("Entrada:", getChecked())
+    //console.log("Correta:", getCorrect())
 
     if (entrada == correta) {
 
@@ -76,22 +76,22 @@ function escrever(objeto, id) {
 
 }
 
-function gravar(oQueGravar) { //armazena no section storage
+function gravar(oQueGravar) { //armazena respostas no section storage
 
     sessionStorage.setItem("respostas", oQueGravar)
 
 }
 
-function salvarFormulario(id) {
+function salvarFormulario(id) { //salvar as respostas no cache
 
-    entrada = getChecked() //variavel entrada recebe funcao getchecked
+    entrada = getChecked() //variavel entrada recebe funcão getchecked
 
 
     if (sessionStorage.getItem("respostas")) { //pega id respostas
 
         let substituiu = false //variavel substituiu começa em falso
 
-        memoria = sessionStorage.getItem("respostas") // memoria armazena dados de "resposta"
+        memoria = sessionStorage.getItem("respostas") //memoria armazena dados de "resposta"
 
         memoriaSplit = memoria.split(" ") //memoria split dá espaco entre dados do armazenamento da sectionstorage
 
@@ -106,7 +106,7 @@ function salvarFormulario(id) {
                 gravar(sobreescrever(memoria, id, index))
 
                 break;
-            } // transforma  id + resposta em padrão q5:D = q5 alternativa, concatena : e resposta D,
+            } //transforma id + resposta em padrão q5:D = q5 alternativa, concatena : e resposta D,
         }
 
         if (!substituiu) {  //substituir valor de input flegado para novo input flegado
@@ -115,7 +115,7 @@ function salvarFormulario(id) {
 
     }
 
-    else {     //
+    else {
         sessionStorage.setItem("respostas", `${id}:${entrada}`)
     }
 }
@@ -123,9 +123,9 @@ function salvarFormulario(id) {
 
 window.onload = function autofill(id) {  //função para auto preencher sessionStorage
 
-    memoria = sessionStorage.getItem("respostas"); // atribui session de nome respostas e armazena na variavel memoria para tratamento
+    memoria = sessionStorage.getItem("respostas"); //atribui session de nome respostas e armazena na variavel memoria para tratamento
 
-    memoriaSplit = memoria.split(" "); // logica para separar por espaço e : entre numero de questão e alternativa flegada
+    memoriaSplit = memoria.split(" "); //logica para separar por espaço e : entre numero de questão e alternativa flegada
 
     for (c = 0; c < memoriaSplit.length; c++) {
 
@@ -163,18 +163,18 @@ function resultado() { //gabarito da prova
 
     console.log(corretas)
 
-    // calculo de porcentagem
+    //contagem de questões respondidas, acertos e porcentagem
     var porcentagem = corretas / quebrar.length * 100;
     var porcentagem = porcentagem.toFixed(1);
 
 
-    document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}` // para retornar elemento na página html pelo ID
-    document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}` // retorna questoes respondidas 
+    document.getElementById("acertos").innerHTML = `Seus acertos: ${corretas}` //para retornar elemento na página html pelo ID
+    document.getElementById("qtt").innerHTML = `Questões respondidas: ${quebrar.length}` //retorna questoes respondidas 
     document.getElementById("porcentagem").innerHTML = `Porcentagem de alternativas corretas: ${porcentagem + "%"}`
 
 }
 
-function inputVazio() {
+function inputVazio() { //caso nenhuma alternativa for selecionada, mostrará um aviso
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
